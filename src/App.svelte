@@ -1,7 +1,7 @@
 <script>
 	import {admin} from "./store";
 	import DodajKomad from './DodajKomad.svelte';
-	import Komad from './Komad.svelte';
+	import Komadi from './Komadi.svelte';
 		let muzke = [
 		{"naslov": "fazlja","votes": 0},
 		{"naslov": "dusan","votes": 0},
@@ -24,9 +24,7 @@
 	<DodajKomad on:novKomad={novKomad}></DodajKomad>
 	
 	<div class="komadi">
-		{#each muzke as komad}
-			<Komad bind:komad on:removeKomad={removeKomad}></Komad>
-		{/each}
+		<Komadi></Komadi>
 	</div>
 	
 	
